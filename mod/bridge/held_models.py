@@ -1,0 +1,45 @@
+"""Held item models the puppet can show: (PLCompItem file, model name), in a fixed order shared with the
+puppet (mod/puppet/d_a_coop_puppet.cpp sHeldModels). The index goes over the wire. Generated from the model names in
+PLCompItem's dat/*.brresC files (names only; the models themselves come from each player's own game).
+"""
+
+HELD_MODELS = (
+    ("EquipBeetle", "EquipBeetle"),
+    ("EquipBeetle", "EquipBeetleGauntlet"),
+    ("EquipBowA", "EquipBowA"),
+    ("EquipBowB", "EquipBowB"),
+    ("EquipBowC", "EquipBowC"),
+    ("EquipHarp", "EquipHarp"),
+    ("EquipHookShot", "EquipHookShot"),
+    ("EquipHookShot", "EquipHookShotChain"),
+    ("EquipHookShot", "EquipHookShotTip"),
+    ("EquipMoleGloveA", "EquipMoleGloveAL"),
+    ("EquipMoleGloveA", "EquipMoleGloveAR"),
+    ("EquipMoleGloveB", "EquipMoleGloveBL"),
+    ("EquipMoleGloveB", "EquipMoleGloveBR"),
+    ("EquipNetA", "EquipNetA"),
+    ("EquipNetB", "EquipNetB"),
+    ("EquipPachinkoA", "EquipPachinkoA"),
+    ("EquipPachinkoB", "EquipPachinkoB"),
+    ("EquipStole", "EquipStole"),
+    ("EquipVacuum", "EquipVacuum"),
+    ("EquipWhip", "EquipWhipGrip"),
+    ("EquipWhip", "EquipWhipTip"),
+    ("EquipBottle", "EquipBottleAir"),
+    ("EquipBottle", "EquipBottleEmpty"),
+    ("EquipBottle", "EquipBottleFairy"),
+    ("EquipBottle", "EquipBottleGuts"),
+    ("EquipBottle", "EquipBottleHoly"),
+    ("EquipBottle", "EquipBottleKinokoA00"),
+    ("EquipBottle", "EquipBottleKinokoA01"),
+    ("EquipBottle", "EquipBottleKinokoA02"),
+    ("EquipBottle", "EquipBottleKinokoB"),
+    ("EquipBottle", "EquipBottleKusuri"),
+    ("EquipBottle", "EquipBottleKusuriS"),
+    ("EquipBottle", "EquipBottleMuteki"),
+    ("EquipBottle", "EquipBottlePumpkin"),
+    ("EquipBottle", "EquipBottleRepair"),
+    ("EquipBottle", "EquipBottleRepairS"),
+    ("EquipBottle", "EquipBottleWater"),
+)
+HELD_INDEX = {model: i for i, (_file, model) in enumerate(HELD_MODELS)}

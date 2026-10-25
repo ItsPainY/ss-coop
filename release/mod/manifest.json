@@ -1,0 +1,13 @@
+{
+  "game_id": "SOUE01",
+  "revision": "0",
+  "main_dol_sha1": "450a6806f46d59dcf8278db08e06f94865a4b18a",
+  "rels_arc_original_sha256": "b1141dcd7a208e7519d3cffccabc33ef52c8a880f7b2bab1382ed3f84e9f487d",
+  "puppet_rel_sha256": "c1c99839a910499066fce8851a44c274a55e11b63c5982160e4982d90484d78e",
+  "rels_arc_patched_sha256": "77a6c64cdcad12a70d59057f358b6939ee75625030818399e89bdbfb641a565b",
+  "puppet_rel_name": "rels/d_a_morita_testNP.rel",
+  "dolphin_tested": "2609a",
+  "version": "0.9",
+  "protocol": "SSC9",
+  "puppet_build": 19
+}

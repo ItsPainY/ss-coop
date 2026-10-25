@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+# game data and builds never go here
+game/
+*.rel
+*.arc
+*.dol
+*.rvz
+*.iso
+*.sav
+*.exe
+release/build/work/
+local/
