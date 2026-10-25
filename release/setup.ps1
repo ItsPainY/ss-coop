@@ -1,4 +1,4 @@
-# Skyward Sword co-op, one-time setup. Uses YOUR OWN disc dump; nothing of the game ships with this mod.
+﻿# Skyward Sword co-op, one-time setup. Uses YOUR OWN disc dump; nothing of the game ships with this mod.
 #   powershell -ExecutionPolicy Bypass -File setup.ps1 -Disc "C:\path\to\Skyward Sword.rvz" [-Save "...\wiiking2.sav"]
 # Needs: Dolphin 2609a unzipped into .\Dolphin-x64. No Python: helpers are in sscoop.exe (source in bridge\, tools\).
 param(
@@ -75,10 +75,12 @@ Remove-Item -Recurse -Force $work
 if ((Sha $arc SHA256) -ne $man.rels_arc_patched_sha256) { Fail "patched rels.arc has an unexpected hash" }
 Write-Host "Puppet module installed"
 
-# 4. Dolphin settings folder: the spawn hook (Gecko code) and cheats on. Controls are set up inside Dolphin.
+# 4. Dolphin settings folder: the spawn hook (Gecko code) and cheats on, and the Xbox controller profile.
 New-Item -ItemType Directory -Force "$user\GameSettings" | Out-Null
 Copy-Item "$here\mod\SOUE01.ini" "$user\GameSettings\SOUE01.ini" -Force
 & $exe cheats $user | Out-Null
+# Xbox controller layout: always offered as a Dolphin profile, used only if this player has no controls yet.
+& powershell -NoProfile -ExecutionPolicy Bypass -File "$here\controls.ps1" -UserDir $UserDir
 if ($Save) {
     # A save is three files (wiiking2.sav, skip.dat, banner.bin). With only wiiking2.sav the game creates a new,
     # empty save on boot (seen 2026-10-25), so the whole folder is copied. -Save may name the folder or the .sav.

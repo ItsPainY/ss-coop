@@ -7,7 +7,7 @@
   "rels_arc_patched_sha256": "77a6c64cdcad12a70d59057f358b6939ee75625030818399e89bdbfb641a565b",
   "puppet_rel_name": "rels/d_a_morita_testNP.rel",
   "dolphin_tested": "2609a",
-  "version": "0.9",
+  "version": "0.9.1",
   "protocol": "SSC9",
   "puppet_build": 19
 }

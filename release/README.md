@@ -1,4 +1,4 @@
-# Skyward Sword co-op (v0.9, early test)
+# Skyward Sword co-op (v0.9.1, early test)
 
 Two players, each in their own Dolphin, see each other's Link and share story progress.
 
@@ -19,20 +19,21 @@ animate separately in each game. An enemy only damages the Link in its own game.
 held items (the bow string, a clawshot or whip flying out: the other Link holds them, they don't move on their own), and
 animations that come with special items or situations.
 
+**New in 0.9.1:** a ready-made Xbox controller layout (see Controls), so no Wii Remote or Nunchuk is needed.
 **New in 0.9:** Keese, ChuChus, Remlits and Skytails move the same way in both games, attacks included.
 **New in 0.8:** enemies stand in the same place in both games and share damage. **New in 0.7:** the other Link holds their items: bow, slingshot, beetle, clawshots, whip, Gust Bellows, harp,
 bug net, bottles, mole gloves, sailcloth. **New in 0.6:** defeated enemies are shared while you are both in the same area: an enemy the other player
 defeats disappears in your game too (it vanishes, no death animation and no item drop for you) and doesn't come
 back until you leave the area, as in the normal game. **New in 0.5:** the other Link carries their sword, sheath and shield. When they change sword or shield, the
 other Link briefly disappears and comes back with the new one. **New in 0.4:** the other Link plays the other player's real animations. **New in 0.3:** dungeon keys/maps and chests are shared. **New in 0.2:** the other Link has a head, hands,
-animations and the right outfit. Different versions can't connect to each other: **both players need 0.9.**
+animations and the right outfit. Different versions can't connect to each other: **both players need 0.9 or 0.9.1** (those two work together).
 
 ## Updating from an earlier version
 
 1. Unzip the new zip. Copy everything **inside** its `ss-coop` folder into your existing folder
    (e.g. `ss-coop-v0.1`) and let Windows replace the files.
 2. Double-click **`1 Setup.cmd`**. It sees the game is already set up and only updates the mod files: no disc
-   needed, your save and controls stay.
+   needed, your save and controls stay (the new Xbox layout is only added as a profile you can pick).
 
 This package contains **no game files**. Each player needs their own dump of their own disc.
 
@@ -66,8 +67,39 @@ This package contains **no game files**. Each player needs their own dump of the
    - installs the co-op module (your original archive is kept as `game\rels.arc.original`),
    - prepares a separate Dolphin settings folder `dolphin-user\`. Your normal Dolphin is not touched.
 
-4. **Controls:** the first time you play (step below), open **Controllers** in Dolphin and set up
-   Wii Remote 1 (Emulated, with Nunchuk and MotionPlus). These settings are separate from any other Dolphin.
+5. **Controls:** see the next section. If you have never set up controls in this folder, setup already chose the
+   Xbox controller layout for you.
+
+## Controls (Xbox controller, no Wii hardware needed)
+
+Any Xbox controller on Windows works (wired or wireless; Xbox One, Series, Elite). The Wii Remote's pointer is the
+mouse.
+
+| Wii | Xbox controller | Used for |
+|---|---|---|
+| Nunchuk stick | Left stick | Walk, run |
+| Sword swing | Right stick, push in a direction | Swing in that direction (up, down, left, right, diagonals) |
+| Sword stab | Click the right stick | Thrust |
+| A | A | Action, dash (hold), talk |
+| B | B | Use the item in hand |
+| Nunchuk Z | LT | Target |
+| Nunchuk C | LB | |
+| Shake Nunchuk | RB | Shield bash |
+| Shake Wii Remote | Click the left stick | |
+| 1 / 2 | X / Y | |
+| - / + | View (Back) / Menu (Start) | |
+| D-Pad | D-Pad | |
+| Pointer | Mouse | Pointing in menus, aiming |
+| Home | Enter on the keyboard | |
+
+- **Use it:** if you already had your own controls, they are kept. To switch to this layout, double-click
+  **`4 Xbox controls.cmd`** (your old controls are saved as `dolphin-user\Config\WiimoteNew.ini.backup-...`).
+  It is also in Dolphin under **Controllers → Wii Remote 1 → Configure → Profile: "Xbox controller (ss-coop)" →
+  Load**.
+- **Change a button:** in that same window, click the field and press the button you want, then **Save** the profile
+  under a new name so an update does not overwrite it.
+- **Spin attack** (untested with this layout): the game wants the Wii Remote and Nunchuk swung sideways together;
+  try the right stick sideways together with RB. Tell the host what works, so the layout can be improved.
 
 ## Playing
 
